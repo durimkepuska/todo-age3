@@ -1,0 +1,24 @@
+.container {
+	    width: 100%;
+	    border: 10px solid red;
+	    border-radius: 25px;
+	    box-sizing: border-box;
+	    padding: 5px 30PX 55px 10px;
+}
+.header {
+	height: 180px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-input{
+	border: 2px gray solid;
+	border-radius: 6px;
+}
+
+.save-toto-button{
+	border: 2px gray solid;
+	border-radius: 6px;
+}
