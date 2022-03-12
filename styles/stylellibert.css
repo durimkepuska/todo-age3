@@ -1,6 +1,7 @@
 ﻿.container {
     background-color: aqua;
     width: 500px;
+    height: 500px;
     border: 10px solid blue;
     border-radius: 5px;
     box-sizing:  border-box;
@@ -8,6 +9,7 @@
 }
 
 .header {
+    border-radius: 5px;
     background-color: dimgrey;
     height: auto;
     display: flex;
@@ -19,14 +21,20 @@
 }
 
 .title-input {
-    background-color: purple;
-    border: 5px solid red;
+    color:white;
+    font-style: normal;
+    background-color: black;
+    border: 5px solid white;
     border-radius: 50px;
+    margin: 10px;
 }
 
 .save-toto-button {
+    color: white;
+    font-style: normal;
     background-color: orange;
     border: 5px solid white;
     border-radius: 50px;
+    margin: 10px;
    
 }
