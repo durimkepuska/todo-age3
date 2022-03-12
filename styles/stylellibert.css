@@ -1,0 +1,32 @@
+﻿.container {
+    background-color: aqua;
+    width: 500px;
+    border: 10px solid blue;
+    border-radius: 5px;
+    box-sizing:  border-box;
+    padding: 20px;
+}
+
+.header {
+    background-color: dimgrey;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    margin: 5px;
+    padding: 5px;
+}
+
+.title-input {
+    background-color: purple;
+    border: 5px solid red;
+    border-radius: 50px;
+}
+
+.save-toto-button {
+    background-color: orange;
+    border: 5px solid white;
+    border-radius: 50px;
+   
+}
