@@ -1,0 +1,117 @@
+﻿.container {
+    background-color: aqua;
+    width: 100%;
+    height: 100%;
+    border: 10px solid blue;
+    border-radius: 5px;
+    box-sizing:  border-box;
+    padding: 20px;
+}
+
+.header {
+    border-radius: 5px;
+    background-color: dimgrey;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    padding: 5px;
+}
+
+.title-input {
+    color:white;
+    font-style: normal;
+    background-color: black;
+    border: 5px solid white;
+    border-radius: 50px;
+    margin: 10px;
+    outline: none;
+}
+
+.save-toto-button {
+    display: flex;
+    color: white;
+    font-style: normal;
+    background-color: orange;
+    border: 5px solid white;
+    border-radius: 50px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    transition: ease-in 0.2s;
+    box-shadow: inset 0 0 0 0 red;
+}
+
+.save-toto-button:hover {
+    box-shadow: rgba(0, 255, 0, 0.5) 0 0 30px 0 inset;
+    cursor: pointer;
+    color: black;
+}
+
+.test-text {
+    background-color: darkblue;
+    border-radius: 5px;
+    color: white;
+    padding: 2px 10px;
+    margin: 5px;
+   
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap');
+
+.button-hey {
+    font-family: 'Supermercado One', cursive;
+    letter-spacing: 4px;
+    background-color: yellow;
+}
+.button-hey {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    min-height: 100px;
+}
+
+.button-hey {
+    width: 300px;
+    height: 100px;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    box-shadow: green 0 0 200px 100px inset;
+    transition: ease-out 0.2s;
+    font-size: 2rem;
+    outline: none;
+}
+
+    .button-hey:hover {
+        box-shadow: steelblue 0 0 0 0 inset;
+        cursor: pointer;
+        color: black;
+    }
+
+li:nth-child(1) {
+        color: purple;
+        font-size: 50px;
+
+    }
+li:nth-child(2) {
+    color: blue;
+    font-size: 50px;
+}
+li:nth-child(3) {
+    color: black;
+    font-size: 50px;
+}
+li:nth-child(4) {
+    color: orangered;
+    font-size: 50px;
+}
