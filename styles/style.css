@@ -1,9 +1,8 @@
 .container {
 	    width: 100%;
-	    border: 10px solid red;
+	    border: 10px solid gray;
 	    border-radius: 25px;
 	    box-sizing: border-box;
-	    padding: 5px 30PX 55px 10px;
 }
 .header {
 	height: 180px;
@@ -21,4 +20,49 @@
 .save-toto-button{
 	border: 2px gray solid;
 	border-radius: 6px;
+}
+
+.red{
+	background-color: red;
+}
+
+.todo-list{
+	padding: 20px 10px;
+    border-top: 5px solid gray;
+}
+.todo {
+	display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 3px solid gray;
+    border-radius: 9px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.todo .title {
+	font-weight: 800;
+}
+
+.todo-list div	{
+	background-color: red;
+}
+
+.todo  button {
+	width: 100px;
+	height: 35px;
+	border: 5px gray solid;
+    border-radius: 10px;
+    margin: 1px;
+}
+
+.edit-todo{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 50px 0px;
+}
+
+.edit-todo div {
+	padding-top: 50px;
 }
