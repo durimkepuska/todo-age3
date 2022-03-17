@@ -36,8 +36,8 @@
     height: 100vh;
 }
 .container {
-    width: 470px;
-    height: 450px;
+    width: 680px;
+    height: 500px;
     top: 50%;
     left: 50%;
     position: absolute;
@@ -81,14 +81,14 @@
 
 }
 .fa-solid{
-font-size: 40px;
-text-decoration: none;
-background-color: #775ef8;
-color: white;
-text-decoration: none;
-outline: none;
-cursor: pointer;
-border: none;
+    font-size: 40px;
+    text-decoration: none;
+    background-color: #775ef8;
+    color: white;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    border: none;
 }
 
 .todo-list{
@@ -118,7 +118,7 @@ border: none;
     padding-left: 7px;
 }
 .task-footer{
-    height: 180px;
+    height: 230px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -132,7 +132,7 @@ border: none;
     justify-content: center;
 }
 .name-of-tasks{
-    width: 75%;
+    width: 37%;
     height: 40px;
     font-family: 'Montserrat';
     font-size: 15px;
@@ -160,7 +160,10 @@ border: none;
     text-transform: uppercase;
     border: 2px solid white;
     border-radius: 8px;
-    transition: .5s;
+    transition: .5s;  
+}
+.edit-tasks a{
+    text-decoration: none;
 }
 .delete-tasks{
     height: 36px;
@@ -181,10 +184,10 @@ border: none;
 }
 .delete-tasks:hover{
     background-color: black;
-    box-shadow: 2px 0 26px red;
 }
 .edit-tasks:hover{
     background: #69fbc6;
     color: black;
     border: 1px solid white;
+    
 }
