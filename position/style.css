@@ -1,0 +1,15 @@
+.container {
+	background-color: red;
+	padding: 10px;
+	height: 2000px;
+	width: 100%;
+}
+
+.container div{
+	background-color: gray;
+	margin: 5px;
+}
+
+.second {
+	position: fixed;
+}

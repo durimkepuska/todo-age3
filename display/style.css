@@ -1,0 +1,8 @@
+div,span {
+	background-color: red;
+}
+
+.romb {
+	display: inline-block;
+	height: 100px;
+}
