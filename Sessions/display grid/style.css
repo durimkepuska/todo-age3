@@ -1,14 +1,21 @@
 .grid-container {
     display: grid;
 
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: repeat(auto-fit, 300px);
-    grid-row-gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50px 200px;
+    grid-gap: 15px;
 }
 
-
 .grid-container div {
-    height: 300px;
-    width: 200px;
-    background-color: blue;
+    height: auto;
+    width: auto;
+    background-color: aqua;
+    color: white;
+}
+
+.nav {
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+
 }
