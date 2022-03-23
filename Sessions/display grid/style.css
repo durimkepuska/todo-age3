@@ -1,9 +1,9 @@
 .grid-container {
     display: grid;
 
-    grid-template-columns: 300px 300px 300px;
-    grid-template-rows: 400px 400px;
-    grid-row-gap: 150px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fit, 300px);
+    grid-row-gap: 15px;
 }
 
 
@@ -11,5 +11,4 @@
     height: 300px;
     width: 200px;
     background-color: blue;
-    margin: 1px;
 }
