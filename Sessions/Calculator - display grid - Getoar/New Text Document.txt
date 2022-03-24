@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator - Grid</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1 class="headerii">Calculator Design using Display:Grid</h1>
+
+    <div class="calculator">
+        <input type="number" class="results" placeholder="0">
+
+        <div class="calculator-buttons">
+
+        <button class="calc-butt ac-b">C</button>
+        <button class="calc-butt /-p">&divide;</button>
+        <button class="calc-butt">7</button>
+        <button class="calc-butt">8</button>
+        <button class="calc-butt">9</button>
+        <button class="calc-butt /-sh">&times;</button>
+        <button class="calc-butt">4</button>
+        <button class="calc-butt">5</button>
+        <button class="calc-butt">6</button>
+        <button class="calc-butt -min">&minus;</button>
+        <button class="calc-butt">1</button>
+        <button class="calc-butt">2</button>
+        <button class="calc-butt">3</button>
+        <button class="calc-butt plus">&plus;</button>
+        <button class="calc-butt zero">0</button>
+        <button class="calc-butt baraz">&equals;</button>
+    </div>
+
+    </div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+-----------------------
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;600&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.calculator{
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid rgb(255, 255, 255);    
+    border-radius: 3px;
+    
+}
+body{
+background-image: url(/ren.jpeg);
+background-repeat: no-repeat;
+background-size: cover;
+height: 100vh;
+width: 100%;
+}
+
+.calculator{
+    width: 100%;
+    position: relative;
+    top: 10%;
+}
+
+.results{
+    padding-top: 25px;
+    width: 100%;
+    background-color: rgb(108, 10, 156);
+    text-align: right;
+    border: none;
+    box-shadow: none;
+    border-bottom: 2px solid purple;
+    font-size: 25px;
+    
+}
+.results::placeholder{
+    color: white;
+    font-weight: 600;
+    text-align: right;
+}
+
+
+.calculator-buttons{
+    display: grid;
+    grid-template: repeat(5,1fr) / repeat(4,1fr);
+    grid-gap: 8px;
+    padding: 20px;
+    
+}
+.calc-butt{
+    padding: 15px;
+    background-color: transparent;
+    border: 1px solid purple;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+    
+}
+.ac-b{
+ grid-column: 2 / 4;
+ background-color: rgba(128, 0, 128, 0.315);
+
+}
+.baraz{
+    grid-column: 2 / 5;
+    background-color: rgba(128, 0, 128, 0.315);
+}
+.headerii{
+    padding-top: 30px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    background: transparent;
+    font-family:'Montserrat',sans-serif;
+
+}
