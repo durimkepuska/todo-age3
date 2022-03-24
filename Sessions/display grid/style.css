@@ -49,6 +49,16 @@ html,body {
     grid-gap: 5px;
 }
 
+.post-2{
+    /*grid-row-start: 1;*/
+    /*grid-row-end: 3;*/
+    /*grid-column-start: 2;*/
+    /*grid-column-end: 3;*/
+    /*grid-area: 1/2/3/3;*/
+
+
+}
+
 
 
 
