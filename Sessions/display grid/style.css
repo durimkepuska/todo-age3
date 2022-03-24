@@ -10,7 +10,7 @@ html,body {
     grid-template-areas: "header header header"
                           "left posts body";
     grid-template-columns: 1fr 2fr 1fr ;
-    grid-template-rows: 50px 2000px;
+    grid-template-rows: 50px 600px;
     grid-gap: 15px;
 }
 
@@ -34,4 +34,34 @@ html,body {
 .nav input{
     height: 20px;
 }
+
+.posts div {
+    width: auto;
+    height: auto;
+    background-color: #4d40c9;
+}
+
+.posts {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    grid-gap: 5px;
+}
+
+
+
+
+
+/*//justify - align*/
+
+
+
+
+
+
+
+
+
+
 

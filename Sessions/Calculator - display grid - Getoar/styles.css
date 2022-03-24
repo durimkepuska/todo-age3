@@ -1,33 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;600&display=swap');
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-.calculator{
+.calculator {
     max-width: 400px;
     margin: 0 auto;
-    border: 1px solid rgb(255, 255, 255);    
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 3px;
-    
-}
-body{
-background-image: url(/ren.jpeg);
-background-repeat: no-repeat;
-background-size: cover;
-height: 100vh;
-width: 100%;
+
 }
 
-.calculator{
+body {
+    background-image: url(ren.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.calculator {
     width: 100%;
     position: relative;
     top: 10%;
 }
 
-.results{
+.results {
     padding-top: 25px;
     width: 100%;
     background-color: rgb(108, 10, 156);
@@ -36,46 +37,51 @@ width: 100%;
     box-shadow: none;
     border-bottom: 2px solid purple;
     font-size: 25px;
-    
+
 }
-.results::placeholder{
+
+.results::placeholder {
     color: white;
     font-weight: 600;
     text-align: right;
 }
 
 
-.calculator-buttons{
+.calculator-buttons {
     display: grid;
-    grid-template: repeat(5,1fr) / repeat(4,1fr);
+    grid-template: repeat(5, 1fr) / repeat(4, 1fr);
     grid-gap: 8px;
     padding: 20px;
-    
+
 }
-.calc-butt{
+
+.calc-butt {
     padding: 15px;
     background-color: transparent;
     border: 1px solid purple;
     color: white;
     font-weight: 800;
     cursor: pointer;
-    
-}
-.ac-b{
- grid-column: 2 / 4;
- background-color: rgba(128, 0, 128, 0.315);
 
 }
-.baraz{
+
+.ac-b {
+    grid-column: 2 / 4;
+    background-color: rgba(128, 0, 128, 0.315);
+
+}
+
+.baraz {
     grid-column: 2 / 5;
     background-color: rgba(128, 0, 128, 0.315);
 }
-.headerii{
+
+.headerii {
     padding-top: 30px;
     width: 100%;
     color: white;
     text-align: center;
     background: transparent;
-    font-family:'Montserrat',sans-serif;
+    font-family: 'Montserrat', sans-serif;
 
 }
