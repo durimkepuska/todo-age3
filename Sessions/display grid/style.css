@@ -61,10 +61,14 @@ html,body {
 
 
 
-
-
 /*//justify - align*/
 
+
+
+
+.post-1 {
+    grid-area: 2/1/3/3;
+}
 
 
 
