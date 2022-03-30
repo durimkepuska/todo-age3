@@ -5,8 +5,9 @@
 
  .singup-box {
      width: 360px;
-     height: 720px;
+     height: 600px;
      margin: auto;
+     margin-top: 50px;
      background-color: white;
      border-radius: 4px;
  }
@@ -14,6 +15,7 @@
     width: 360px;
     height: 320px;
     margin: auto;
+    margin-top: 100px;
     background-color: white;
     border-radius: 4px;
  }
