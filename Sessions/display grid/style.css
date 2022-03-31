@@ -1,4 +1,4 @@
-html,body {
+html, body {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -9,7 +9,7 @@ html,body {
 
     grid-template-areas: "header header header"
                           "left posts body";
-    grid-template-columns: 1fr 2fr 1fr ;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 50px 600px;
     grid-gap: 15px;
 }
@@ -31,7 +31,7 @@ html,body {
     top: 0;
 }
 
-.nav input{
+.nav input {
     height: 20px;
 }
 
@@ -39,6 +39,17 @@ html,body {
     width: auto;
     height: auto;
     background-color: #4d40c9;
+}
+
+.post-2 {
+
+    /*grid-row-start: 1;*/
+    /*grid-row-end: 3;*/
+    /*grid-column-start: 2;*/
+    /*grid-column-end: 3;*/
+    /*grid-area: 1/2/3/3;*/
+
+
 }
 
 .posts {
@@ -49,26 +60,19 @@ html,body {
     grid-gap: 5px;
 }
 
-.post-2{
-    /*grid-row-start: 1;*/
+.post-1 {
+    /*grid-row-start: 2;*/
     /*grid-row-end: 3;*/
-    /*grid-column-start: 2;*/
+    /*grid-column-start: 1;*/
     /*grid-column-end: 3;*/
-    /*grid-area: 1/2/3/3;*/
 
+    grid-area: 2 / 1 / 3 / 3;
 
 }
-
 
 
 /*//justify - align*/
 
-
-
-
-.post-1 {
-    grid-area: 2/1/3/3;
-}
 
 
 
