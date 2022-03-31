@@ -5,17 +5,18 @@
 </body>
 
 <script>
-    const age = 1;
-    const name = "durim";
 
-    const isMale = false;
-    const isFrance = false;
-    const sakte = isMale || age > 65 || isFrance;
+    const age = 65;
 
-    console.log(age % 2 === 1)
-
-
-    console.log(typeof name)
+    if (age >= 65) {
+        console.log("pensioner");
+    } else if (age >= 55) {
+        console.log("burre");
+    } else if (age >= 35) {
+        console.log("djale");
+    } else if (age >= 15) {
+        console.log("femije");
+    }
 
 
 </script>
