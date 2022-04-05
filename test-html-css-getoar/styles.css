@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+h3{
+    width: 50%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 45px;
+    position: absolute;
+    top: 0;
+    border: 2px solid black;
+    border-radius: 50px;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.container .box{
+    position: relative;
+    width: 350px;   
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 5px 20px rgba(0,0,0,30%);
+    border-radius: 4px;
+    margin: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+}
+.box .icon{
+    height: 80px;
+    position: relative;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: #000;
+    margin: 0 auto;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0px;
+    transition: 1s;
+    font-size: 40px;
+    font-weight: 700;
+}
+.box a{
+    width: 60%;
+    border: 1px solid black;
+    height: 35px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    position: relative;
+    top: 20px;
+    font-size: 17px;
+    text-align: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    box-shadow: 0 0 8px 0 black;
+        background-color: #fff;
+}
+.container .box:nth-child(1) a{
+    background-color: #fff;
+    
+}
+
+.container .box:nth-child(1) .icon{
+    color: black;
+}
+.container .box:nth-child(1) .icon{
+    box-shadow: 0 0 0 0px #e91e63;
+    background: #e91e63;
+}
+
+.container .box:nth-child(1):hover .icon{
+    box-shadow: 0 0 0 400px #e91e63;
+    border: 2px solid black;
+}
+.container .box:nth-child(2) .icon{
+    box-shadow: 0 0 0 0px #23e629;
+    background: #23e629;
+}
+
+.container .box:nth-child(2):hover .icon{
+    box-shadow: 0 0 0 400px #23e629;
+    border: 2px solid black;
+
+}
+.container .box:nth-child(3) .icon{
+    box-shadow: 0 0 0 0px #2196f3;
+    background: #2196f3;
+}
+
+.container .box:nth-child(3):hover .icon{
+    box-shadow: 0 0 0 400px #2196f3;
+    border: 2px solid black;
+
+}
+.container .box .content{
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+}
+.container .box:hover .content{
+    color: #fff;
+}
