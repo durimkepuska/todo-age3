@@ -7,10 +7,14 @@
 <script>
 
     const members = prompt("Sa antare jeni?");
+    let totalAge = 0;
 
     for (let i = 1; i <= members; i++) {
         console.log('looping: ' + i);
+        totalAge = totalAge + +prompt("Sa vjet eshte antari i " + i)
     }
+
+    console.log('totali i moshes: ' + totalAge)
 
 
 </script>
