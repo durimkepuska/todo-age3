@@ -14,10 +14,10 @@
         return sumOfNumbers;
     }
 
-    // console.log(sum(1, 3) === 6);
-    // console.log(sum(1, 4) === 10);
-    // console.log(sum(1, 5) === 15);
-    // console.log(sum(1, 6) === 21);
+    console.log(sum(1, 3) === 6);
+    console.log(sum(1, 4) === 10);
+    console.log(sum(1, 5) === 15);
+    console.log(sum(1, 6) === 21);
 
 
     const dayName = weekDays(2)
@@ -33,6 +33,26 @@
                 return 'nuk dihet'
         }
     }
+
+    function countChars(name) {
+        return name.length;
+    }
+
+    console.log(countChars("durim"))
+
+
+    function retired(age) {
+        if (age <= 18) {
+            return "still young";
+        } else if (age <= 65) {
+            return "still able to work"
+        } else {
+            return "retired"
+        }
+    }
+
+    console.log(retired(50));
+
 
 </script>
 </html>
