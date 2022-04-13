@@ -14,11 +14,25 @@
         return sumOfNumbers;
     }
 
-    console.log(sum(1, 3) === 6)
-    console.log(sum(1, 4) === 10)
-    console.log(sum(1, 5) === 15)
-    console.log(sum(1, 6) === 21)
+    // console.log(sum(1, 3) === 6);
+    // console.log(sum(1, 4) === 10);
+    // console.log(sum(1, 5) === 15);
+    // console.log(sum(1, 6) === 21);
 
+
+    const dayName = weekDays(2)
+    console.log(dayName)
+
+    function weekDays(day) {
+        switch (day) {
+            case 1:
+                return "e hene"
+            case 2:
+                return 'e marte'
+            default:
+                return 'nuk dihet'
+        }
+    }
 
 </script>
 </html>
