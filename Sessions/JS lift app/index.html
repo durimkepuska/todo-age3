@@ -1,0 +1,36 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Lift App</h1>
+    <div class="buttons">
+        <button onclick="goTo(1)"> 1</button>
+        <button onclick="goTo(2)"> 2</button>
+        <button onclick="goTo(3)"> 3</button>
+        <button onclick="goTo(4)"> 4</button>
+        <button onclick="goTo(5)"> 5</button>
+        <button onclick="goTo(6)"> 6</button>
+    </div>
+
+    <div class="lift-container">
+        <div id="floor-1"></div>
+        <div id="floor-2"></div>
+        <div id="floor-3"></div>
+        <div id="floor-4"></div>
+        <div id="floor-5"></div>
+        <div id="floor-6"></div>
+    </div>
+</body>
+
+<script>
+function goTo(value){
+   document.getElementById('floor-'+value).style.backgroundColor = 'red';
+   for (let i = 1; i <= 6; i++){
+       if(i !== value){
+           document.getElementById('floor-'+i).style.backgroundColor = 'blue';
+       }
+   }
+}
+</script>
+</html>
