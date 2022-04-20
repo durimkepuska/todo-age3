@@ -1,0 +1,47 @@
+<html lang="">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Lift</title>
+</head>
+<body>
+<h1>Lift App</h1>
+<div id="buttons"></div>
+<div id="floors"></div>
+</body>
+
+
+<script>
+    const name = "Durim";
+
+    const red = "#FF0000";
+
+    let floors = [
+        {id: 1, department: 'finance'},
+        {id: 2, department: 'mechanics'},
+        {id: 3, department: 'operation'},
+        {id: 4, department: 'development'},
+        {id: 5, department: 'testing'},
+    ];
+
+    for (let i = 0; i < floors.length; i++) {
+        document.getElementById("buttons").innerHTML =
+            document.getElementById("buttons").innerHTML +
+            `<button onclick="goToFloor(${floors[i].id})">${floors[i].id}</button>`;
+
+        document.getElementById("floors").innerHTML =
+            document.getElementById("floors").innerHTML +
+            `<div id="floor-${floors[i].id}">${floors[i].department}</div>`;
+    }
+
+    function goToFloor(floorId) {
+        for (let i = 1; i <= floors.length; i++) {
+            if (i === floorId) {
+                document.getElementById("floor-" + i).style.backgroundColor = red;
+            } else {
+                document.getElementById("floor-" + i).style.backgroundColor = 'transparent';
+            }
+        }
+    }
+
+</script>
+</html>
