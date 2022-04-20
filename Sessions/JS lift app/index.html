@@ -1,36 +1,35 @@
-<html>
+<html lang="">
 <head>
     <link rel="stylesheet" href="style.css">
+    <title>Lift</title>
 </head>
 <body>
 <h1>Lift App</h1>
-    <div class="buttons">
-        <button onclick="goTo(1)"> 1</button>
-        <button onclick="goTo(2)"> 2</button>
-        <button onclick="goTo(3)"> 3</button>
-        <button onclick="goTo(4)"> 4</button>
-        <button onclick="goTo(5)"> 5</button>
-        <button onclick="goTo(6)"> 6</button>
+    <div id="buttons" class="buttons">
     </div>
 
-    <div class="lift-container">
-        <div id="floor-1"></div>
-        <div id="floor-2"></div>
-        <div id="floor-3"></div>
-        <div id="floor-4"></div>
-        <div id="floor-5"></div>
-        <div id="floor-6"></div>
+    <div id="lift-container" class="lift-container">
     </div>
 </body>
 
 <script>
-function goTo(value){
-   document.getElementById('floor-'+value).style.backgroundColor = 'red';
-   for (let i = 1; i <= 6; i++){
-       if(i !== value){
-           document.getElementById('floor-'+i).style.backgroundColor = 'blue';
-       }
-   }
-}
+    let floors = [1,2,3,4,5,6,7,8,9,10];
+    floors.forEach(f => {
+        document.getElementById("buttons").innerHTML = document.getElementById("buttons").innerHTML +  `<button onclick='goTo(${f})'> ${f}</button>`;
+    });
+
+    floors.forEach(f => {
+        document.getElementById("lift-container").innerHTML = document.getElementById("lift-container").innerHTML +  `<div id="floor-${f}"></div>`;
+    });
+
+    function goTo(value){
+        for (let i = 1; i <= floors.length; i++){
+            if(i === value){
+                document.getElementById('floor-'+i).style.backgroundColor = 'red';
+            } else {
+                document.getElementById('floor-'+i).style.backgroundColor = 'blue';
+            }
+        }
+    }
 </script>
 </html>
