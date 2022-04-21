@@ -1,0 +1,14 @@
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.invoices {
+    display: flex;
+    justify-content: center;
+}
