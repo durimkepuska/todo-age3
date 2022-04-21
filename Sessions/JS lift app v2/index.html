@@ -36,7 +36,11 @@
     function goToFloor(floorId) {
         for (let i = 1; i <= floors.length; i++) {
             if (i === floorId) {
-                document.getElementById("floor-" + i).style.backgroundColor = red;
+                if(document.getElementById("floor-" + i).style.backgroundColor === 'rgb(255, 0, 0)'){
+                    document.getElementById("floor-" + i).style.backgroundColor = 'transparent';
+                } else {
+                    document.getElementById("floor-" + i).style.backgroundColor = red;
+                }
             } else {
                 document.getElementById("floor-" + i).style.backgroundColor = 'transparent';
             }
