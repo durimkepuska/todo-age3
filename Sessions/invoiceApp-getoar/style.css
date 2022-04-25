@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* font-family: 'Montserrat',sans-serif;
+    font-weight: 600; */
+    /* z-index: 1; */
+}
+#container{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+}
+.add button, .company button{
+    border: 1px solid white;
+    padding: 14px;
+    border-radius: 10px;
+    font-family: 'montserrat',sans-serif;
+    font-weight: 700;
+    color: #fff;
+    font-size: 17px;
+    background-color:#692255;
+    cursor: pointer;    
+}
+.add button:hover{
+    background-color: white;
+    color: #692255;
+    transition: 0.7s;
+}
+.fa-plus{
+    margin-right: 10px;
+}.fa-user{
+    margin-right: 10px;
+}
+.company button:hover{
+    background-color: white;
+    color: #692255;
+    transition: 0.7s;
+}
+.title {
+    font-family: 'montserrat';
+    color: rgb(250, 250, 250);
+    font-size: 30px;
+    /* background-color: black; */
+    display: flex;
+    /* width: 40%; */
+    height: 8%;
+    margin-top: 25px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    text-decoration: underline;
+    text-shadow: 0 0 13px black; 
+    padding: 10px;   
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    width: 100%;
+}
+
+#invoices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.tablesData {
+    display: flex;
+    border: 1px solid rgb(237, 237, 237);
+    width: 100%;
+    margin: 2px;
+    /* background-color: rgb(0, 0, 0); */
+    /* color: white; */
+}
+
+.invoices-columns {
+    display: flex;
+    color: #fff;
+    font-family: 'montserrat';
+    width: 100%;
+    font-weight: bold;
+    font-size: 18px;
+    text-shadow: 0 0 10px white;
+    /* -webkit-text-stroke: 3px rgb(255, 248, 248);  */
+}
+
+.column-id {
+    width: 10%;
+}
+.column-name {
+    width: 40%;
+}
+.column-nui {
+    width: 20%;
+}
+.column-add {
+    width: 30%;
+}
+.tablesData table {
+    color: #fff;
+    background-color: rgba(67, 5, 60, 0.687);
+    width: 100%;
+    font-family: 'montserrat';
+    font-weight: 800;
+    font-size: 15px;
+}
+td,tr{
+    border: 1px solid rgb(227, 224, 224);
+    
+}
+.id-Name{
+    width: 10%;
+}
+.Company-name{
+    width: 40%;
+}
+.client-nui{
+    width: 20%;
+}
+.address{
+    width: 30%;
+}
