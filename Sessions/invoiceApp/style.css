@@ -5,19 +5,28 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .title {
     width: 90%;
     margin: auto;
     height: 70px;
     display: flex;
     justify-content: center;
-    /* border: 1px solid red; */
     align-items: center;
     background-color: rgba(145, 191, 239, 0.623);
     font-family: 'Montserrat';
     font-size: 35px;
+    border-radius: 10px 50px;
+    box-shadow: 0 0 5px black;
 }
-
+.headerbg{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    background: linear-gradient(#bad7f5, #ffffff);
+    height: 70px;
+    border-radius: 0 30px;
+}
 .nav {
     display: flex;
     justify-content: space-around;
