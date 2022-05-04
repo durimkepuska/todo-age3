@@ -5,9 +5,21 @@ function renderInvoices() {
                 <div class="column-name">${invoices[i].clientName}</div>
                 <div class="column-nui">${invoices[i].clientNUI}</div>
                 <div class="column-add">${invoices[i].clientAddress}</div>
-                <div class="column-total">${calculateTotalPrice(invoices[i].productsOrServices)}</div>
+                <div class="column-total">${calculateTotalPriceOfAnInvoice(invoices[i].productsOrServices) + ' ' + invoices[i].currency}</div>
             </div>`)
     }
+    addHtmlToId("invoices", `<div class="invoice total">
+        <div>${invoices.length}</div>
+        <div>${calculateTotalOfAllInvoices(invoices) }</div>
+    </div>`)
+}
+
+function calculateTotalOfAllInvoices(invoices) {
+    let total = 0;
+    for (let i = 0; i < invoices.length; i++) {
+        total = total + calculateTotalPriceOfAnInvoice(invoices[i].productsOrServices);
+    }
+    return total
 }
 
 function addHtmlToId(id, html) {
@@ -16,7 +28,7 @@ function addHtmlToId(id, html) {
         html
 }
 
-function calculateTotalPrice(products) {
+function calculateTotalPriceOfAnInvoice(products) {
     let total = 0;
     for (let i = 0; i < products.length; i++) {
         total = total + (products[i].pricePerUnit * products[i].amount);

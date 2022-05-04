@@ -26,7 +26,7 @@ const invoices = [
         clientName: "Curri SHPK",
         clientNUI: "811 444 555",
         clientAddress: "Sami Frasheri",
-        currency: "euro",
+        currency: "$",
         clientPhone: "048 8550 143",
         productsOrServices: [
             {
@@ -92,7 +92,7 @@ const invoices = [
         clientName: "Curri SHPK",
         clientNUI: "811 444 555",
         clientAddress: "Sami Frasheri",
-        currency: "euro",
+        currency: "$",
         clientPhone: "048 8550 143",
         productsOrServices: [
             {

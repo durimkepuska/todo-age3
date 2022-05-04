@@ -67,6 +67,10 @@
     font-family: 'montserrat';
 }
 
+.total {
+    justify-content: space-between;
+}
+
 
 .invoices-columns {
     display: flex;
@@ -96,4 +100,7 @@
 
 .column-add {
     width: 30%;
+}
+.column-total {
+    width: 15%;
 }
