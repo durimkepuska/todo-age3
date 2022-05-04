@@ -5,13 +5,19 @@ const invoices = [
         clientNUI: "178 444 5500",
         clientAddress: "MIthat Frasheri",
         clientPhone: "048 800 143",
+        currency: "euro",
         productsOrServices: [
             {
                 name: "Speca",
                 amount: 5,
                 unit: "kg",
-                pricePerUnit: 8,
-                currency: "euro"
+                pricePerUnit: 3,
+            },
+            {
+                name: "kARROTA",
+                amount: 6,
+                unit: "kg",
+                pricePerUnit: 2,
             }
         ]
     },
@@ -20,14 +26,14 @@ const invoices = [
         clientName: "Curri SHPK",
         clientNUI: "811 444 555",
         clientAddress: "Sami Frasheri",
+        currency: "euro",
         clientPhone: "048 8550 143",
         productsOrServices: [
             {
                 name: "Tranguj",
                 amount: 2,
                 unit: "kg",
-                pricePerUnit: 4,
-                currency: "euro"
+                pricePerUnit: 4
             }
         ]
     },
@@ -36,14 +42,32 @@ const invoices = [
         clientName: "Curri SHPK",
         clientNUI: "811 444 555",
         clientAddress: "Sami Frasheri",
+        currency: "euro",
         clientPhone: "048 8550 143",
         productsOrServices: [
             {
                 name: "Tranguj",
                 amount: 2,
                 unit: "kg",
-                pricePerUnit: 4,
-                currency: "euro"
+                pricePerUnit: 4
+            },
+            {
+                name: "Tranguj",
+                amount: 2,
+                unit: "kg",
+                pricePerUnit: 4
+            },
+            {
+                name: "Tranguj",
+                amount: 2,
+                unit: "kg",
+                pricePerUnit: 4
+            },
+            {
+                name: "Tranguj",
+                amount: 2,
+                unit: "kg",
+                pricePerUnit: 4
             }
         ]
     },
@@ -52,14 +76,14 @@ const invoices = [
         clientName: "Curri SHPK",
         clientNUI: "811 444 555",
         clientAddress: "Sami Frasheri",
+        currency: "euro",
         clientPhone: "048 8550 143",
         productsOrServices: [
             {
                 name: "Tranguj",
                 amount: 2,
                 unit: "kg",
-                pricePerUnit: 4,
-                currency: "euro"
+                pricePerUnit: 4
             }
         ]
     },
@@ -68,14 +92,14 @@ const invoices = [
         clientName: "Curri SHPK",
         clientNUI: "811 444 555",
         clientAddress: "Sami Frasheri",
+        currency: "euro",
         clientPhone: "048 8550 143",
         productsOrServices: [
             {
                 name: "Tranguj",
                 amount: 2,
                 unit: "kg",
-                pricePerUnit: 4,
-                currency: "euro"
+                pricePerUnit: 4
             }
         ]
     },
@@ -84,14 +108,14 @@ const invoices = [
         clientName: "Curri SHPK",
         clientNUI: "811 444 555",
         clientAddress: "Sami Frasheri",
+        currency: "euro",
         clientPhone: "048 8550 143",
         productsOrServices: [
             {
                 name: "Tranguj",
                 amount: 2,
                 unit: "kg",
-                pricePerUnit: 4,
-                currency: "euro"
+                pricePerUnit: 4
             }
         ]
     },
@@ -100,14 +124,14 @@ const invoices = [
         clientName: "Curri SHPK",
         clientNUI: "811 444 555",
         clientAddress: "Sami Frasheri",
+        currency: "euro",
         clientPhone: "048 8550 143",
         productsOrServices: [
             {
                 name: "Tranguj",
                 amount: 2,
                 unit: "kg",
-                pricePerUnit: 4,
-                currency: "euro"
+                pricePerUnit: 4
             }
         ]
     },
@@ -116,14 +140,14 @@ const invoices = [
         clientName: "Curri SHPK",
         clientNUI: "811 444 555",
         clientAddress: "Sami Frasheri",
+        currency: "euro",
         clientPhone: "048 8550 143",
         productsOrServices: [
             {
                 name: "Tranguj",
                 amount: 2,
                 unit: "kg",
-                pricePerUnit: 4,
-                currency: "euro"
+                pricePerUnit: 4
             }
         ]
     },
@@ -132,14 +156,14 @@ const invoices = [
         clientName: "Curri SHPK",
         clientNUI: "811 444 555",
         clientAddress: "Sami Frasheri",
+        currency: "euro",
         clientPhone: "048 8550 143",
         productsOrServices: [
             {
                 name: "Tranguj",
                 amount: 2,
                 unit: "kg",
-                pricePerUnit: 4,
-                currency: "euro"
+                pricePerUnit: 4
             }
         ]
     },
@@ -148,174 +172,14 @@ const invoices = [
         clientName: "Curri SHPK",
         clientNUI: "811 444 555",
         clientAddress: "Sami Frasheri",
+        currency: "euro",
         clientPhone: "048 8550 143",
         productsOrServices: [
             {
                 name: "Tranguj",
                 amount: 2,
                 unit: "kg",
-                pricePerUnit: 4,
-                currency: "euro"
-            }
-        ]
-    },
-    {
-        invoiceId: 2,
-        clientName: "Curri SHPK",
-        clientNUI: "811 444 555",
-        clientAddress: "Sami Frasheri",
-        clientPhone: "048 8550 143",
-        productsOrServices: [
-            {
-                name: "Tranguj",
-                amount: 2,
-                unit: "kg",
-                pricePerUnit: 4,
-                currency: "euro"
-            }
-        ]
-    },
-    {
-        invoiceId: 2,
-        clientName: "Curri SHPK",
-        clientNUI: "811 444 555",
-        clientAddress: "Sami Frasheri",
-        clientPhone: "048 8550 143",
-        productsOrServices: [
-            {
-                name: "Tranguj",
-                amount: 2,
-                unit: "kg",
-                pricePerUnit: 4,
-                currency: "euro"
-            }
-        ]
-    },
-    {
-        invoiceId: 2,
-        clientName: "Curri SHPK",
-        clientNUI: "811 444 555",
-        clientAddress: "Sami Frasheri",
-        clientPhone: "048 8550 143",
-        productsOrServices: [
-            {
-                name: "Tranguj",
-                amount: 2,
-                unit: "kg",
-                pricePerUnit: 4,
-                currency: "euro"
-            }
-        ]
-    },
-    {
-        invoiceId: 2,
-        clientName: "Curri SHPK",
-        clientNUI: "811 444 555",
-        clientAddress: "Sami Frasheri",
-        clientPhone: "048 8550 143",
-        productsOrServices: [
-            {
-                name: "Tranguj",
-                amount: 2,
-                unit: "kg",
-                pricePerUnit: 4,
-                currency: "euro"
-            }
-        ]
-    },
-    {
-        invoiceId: 2,
-        clientName: "Curri SHPK",
-        clientNUI: "811 444 555",
-        clientAddress: "Sami Frasheri",
-        clientPhone: "048 8550 143",
-        productsOrServices: [
-            {
-                name: "Tranguj",
-                amount: 2,
-                unit: "kg",
-                pricePerUnit: 4,
-                currency: "euro"
-            }
-        ]
-    },
-    {
-        invoiceId: 2,
-        clientName: "Curri SHPK",
-        clientNUI: "811 444 555",
-        clientAddress: "Sami Frasheri",
-        clientPhone: "048 8550 143",
-        productsOrServices: [
-            {
-                name: "Tranguj",
-                amount: 2,
-                unit: "kg",
-                pricePerUnit: 4,
-                currency: "euro"
-            }
-        ]
-    },
-    {
-        invoiceId: 2,
-        clientName: "Curri SHPK",
-        clientNUI: "811 444 555",
-        clientAddress: "Sami Frasheri",
-        clientPhone: "048 8550 143",
-        productsOrServices: [
-            {
-                name: "Tranguj",
-                amount: 2,
-                unit: "kg",
-                pricePerUnit: 4,
-                currency: "euro"
-            }
-        ]
-    },
-    {
-        invoiceId: 2,
-        clientName: "Curri SHPK",
-        clientNUI: "811 444 555",
-        clientAddress: "Sami Frasheri",
-        clientPhone: "048 8550 143",
-        productsOrServices: [
-            {
-                name: "Tranguj",
-                amount: 2,
-                unit: "kg",
-                pricePerUnit: 4,
-                currency: "euro"
-            }
-        ]
-    },
-    {
-        invoiceId: 2,
-        clientName: "Curri SHPK",
-        clientNUI: "811 444 555",
-        clientAddress: "Sami Frasheri",
-        clientPhone: "048 8550 143",
-        productsOrServices: [
-            {
-                name: "Tranguj",
-                amount: 2,
-                unit: "kg",
-                pricePerUnit: 4,
-                currency: "euro"
-            }
-        ]
-    },
-    {
-        invoiceId: 2,
-        clientName: "Curri SHPK",
-        clientNUI: "811 444 555",
-        clientAddress: "Sami Frasheri",
-        clientPhone: "048 8550 143",
-        productsOrServices: [
-            {
-                name: "Tranguj",
-                amount: 2,
-                unit: "kg",
-                pricePerUnit: 4,
-                currency: "euro"
+                pricePerUnit: 4
             }
         ]
     }
