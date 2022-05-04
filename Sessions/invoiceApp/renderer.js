@@ -1,4 +1,5 @@
 function renderInvoices() {
+    document.getElementById("invoices").innerHTML = ""
     for (let i = 0; i < invoices.length; i++) {
         addHtmlToId("invoices", `<div class="invoice" onclick="openInvoice(${invoices[i].invoiceId})">
                 <div class="column-id">${invoices[i].invoiceId}</div>
@@ -10,7 +11,7 @@ function renderInvoices() {
     }
     addHtmlToId("invoices", `<div class="invoice total">
         <div>${invoices.length}</div>
-        <div>${calculateTotalOfAllInvoices(invoices) }</div>
+        <div>${calculateTotalOfAllInvoices(invoices)}</div>
     </div>`)
 }
 
@@ -38,6 +39,27 @@ function calculateTotalPriceOfAnInvoice(products) {
 
 function openInvoice(invoiceId) {
     alert(invoiceId)
+}
+
+function saveInvoice() {
+    const clientName = document.getElementById("client_name").value;
+    const clientNui = document.getElementById("client_nui").value;
+    const clientAdd = document.getElementById("client_add").value;
+    const clientPhone = document.getElementById("client_phone").value;
+    const currency = document.getElementById("currency").value;
+
+    const newInvoice = {
+        invoiceId: 100,
+        clientName: clientName,
+        clientNUI: clientNui,
+        clientAddress: clientAdd,
+        clientPhone: clientPhone,
+        currency: currency,
+        productsOrServices: []
+    }
+
+    invoices.push(newInvoice);
+    renderInvoices();
 }
 
 renderInvoices()

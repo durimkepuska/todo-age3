@@ -1,4 +1,4 @@
-const invoices = [
+let invoices = [
     {
         invoiceId: 1,
         clientName: "Fahria SHPK",
