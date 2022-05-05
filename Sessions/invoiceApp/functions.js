@@ -48,7 +48,7 @@ function saveInvoice() {
     const clientPhone = document.getElementById("client_phone").value;
     const currency = document.getElementById("currency").value;
     if (clientName === '' || clientNui === '' || clientAdd === '' || clientPhone === '') {
-        alert("all fields are reuqired");
+        alert("all fields are required");
         return;
     }
     document.getElementById("client_name").value = '';
