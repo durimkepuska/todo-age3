@@ -109,7 +109,7 @@
 }
 .invoice-form {
     width: 100%;
-    display: flex;
+    display: none;
     height: 350px;
     flex-direction: column;
     align-items: center;

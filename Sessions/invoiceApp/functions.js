@@ -62,4 +62,15 @@ function saveInvoice() {
     renderInvoices();
 }
 
+function toggleAddInvoiceForm() {
+    if (document.querySelector(".invoice-form").style.display === 'flex') {
+        document.querySelector(".invoice-form").style.display = 'none';
+        document.querySelector(".add-button").innerHTML = `<i class="fa-solid fa-plus"></i>ADD`;
+    } else {
+        document.querySelector(".invoice-form").style.display = 'flex';
+        document.querySelector(".add-button").innerHTML = `<i class="fa-solid fa-minus"></i>CLOSE`;
+
+    }
+}
+
 renderInvoices()
