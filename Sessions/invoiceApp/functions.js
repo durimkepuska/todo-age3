@@ -72,7 +72,13 @@ function saveInvoice() {
 }
 
 function getNextInvoiceId() {
-    return invoices[invoices.length - 1].invoiceId + 1
+    let maxId = 0;
+    for (let i = 0; i < invoices.length; i++) {
+        if (invoices[i].invoiceId > maxId) {
+            maxId = invoices[i].invoiceId
+        }
+    }
+    return maxId + 1;
 }
 
 function toggleAddInvoiceForm() {
