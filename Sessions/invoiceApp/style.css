@@ -34,6 +34,7 @@
     width: 100%;
     height: 50px;
     align-items: center;
+    margin-top: 40px;
 }
 .fa-plus , .fa-user{
     padding-right: 10px;
@@ -57,6 +58,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 80vh;
 }
 
 .invoice {
@@ -83,6 +85,7 @@
     font-family: 'montserrat';
     color: #000;
     font-weight: 600;
+    margin-top: 50px;
 }
 
 .column-id {
@@ -107,11 +110,77 @@
 .invoice-form {
     width: 100%;
     display: flex;
+    height: 350px;
     flex-direction: column;
     align-items: center;
+    /* border: 1px solid red; */
+    justify-content: space-between;
+    font-size: 17px;
+    font-family: 'montserrat';
+    /* padding: 50px; */
+
 }
 
-.invoice-form div {
-    width: 30%;
-    padding: 10px;
+.inputClass {
+    height: 100%;
+    width: 65%;
+    padding: 9px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'montserrat';
+    margin-top: 30px;
+    align-items: center;
+    
+}
+.inputClass input{
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    width: 60%;
+    height: 40px;
+    background-color: #ceddee;
+    
+}
+.inputClass span{
+    color: black;
+    /* text-shadow: 0 0 1px black; */
+
+}
+.invoice-form .selection-currency{
+    margin-top: 20px;
+    width: 65%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid red; */
+    
+}
+.invoice-form button{
+    background-color: #bad7f5;
+    color: black;
+    font-family: 'montserrat';
+    font-weight: 600;
+    box-shadow: 0 0 5px black;
+    /* border-radius: 30px; */
+    /* width: 150%; */
+    text-align: center;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+    padding: 20px;
+}
+.selection-currency select{
+    background-color: #bad7f5;
+    color: black;
+    font-family: 'montserrat';
+    font-weight: 600;
+    box-shadow: 0 0 5px black;
+    border-radius: 30px;
+    width: 20%;
+    text-align: center;
+
 }

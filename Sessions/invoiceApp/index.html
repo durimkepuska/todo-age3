@@ -21,25 +21,25 @@
     </div>
 
     <div class="invoice-form">
-        <div>
-            <input id="client_name" type="text" placeholder="Client name">
-        </div>
-
-        <div><input id="client_nui" type="text" placeholder="Client NUI"></div>
-        <div><input id="client_add" type="text" placeholder="Client Address"></div>
-        <div><input id="client_phone" type="text" placeholder="Client phone"></div>
-        <div>
+        <div class="inputClass"><span>Client name:</span>
+            <input id="client_name" type="text" >
+        
+        <span>Client nui:</span><input id="client_nui" type="text">
+        <span>Client address:</span><input id="client_add" type="text">
+        <span>Client phone:</span><input id="client_phone" type="text">
+        <div class="selection-currency">
             <select name="currency" id="currency">
-                <option value="$">dollar</option>
-                <option value="e">euro</option>
-                <option value="l">lek</option>
+                <option value="$">Dollar</option>
+                <option value="e">Euro</option>
+                <option value="l">Lek</option>
             </select>
         </div>
-
         <div>
             <button onclick="saveInvoice()" type="button">Save Invoice</button>
         </div>
     </div>
+</div>
+
 
     <div class="invoices-columns">
         <div class="column-id">ID</div>
