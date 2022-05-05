@@ -58,7 +58,7 @@ function saveInvoice() {
     document.getElementById("currency").value = '$';
 
     const newInvoice = {
-        invoiceId: 100,
+        invoiceId: getNextInvoiceId(),
         clientName: clientName,
         clientNUI: clientNui,
         clientAddress: clientAdd,
@@ -69,6 +69,10 @@ function saveInvoice() {
 
     invoices.push(newInvoice);
     renderInvoices();
+}
+
+function getNextInvoiceId() {
+    return invoices[invoices.length - 1].invoiceId + 1
 }
 
 function toggleAddInvoiceForm() {
