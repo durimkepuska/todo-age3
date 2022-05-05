@@ -1,11 +1,7 @@
 let invoices = [
     {
         invoiceId: 1,
-        clientName: "Fahria SHPK",
-        clientNUI: "178 444 5500",
-        clientAddress: "MIthat Frasheri",
-        clientPhone: "048 800 143",
-        currency: "euro",
+        clientId: 1,
         productsOrServices: [
             {
                 name: "Speca",
@@ -23,11 +19,7 @@ let invoices = [
     },
     {
         invoiceId: 2,
-        clientName: "Curri SHPK",
-        clientNUI: "811 444 555",
-        clientAddress: "Sami Frasheri",
-        currency: "$",
-        clientPhone: "048 8550 143",
+        clientId: 2,
         productsOrServices: [
             {
                 name: "Tranguj",
@@ -39,11 +31,7 @@ let invoices = [
     },
     {
         invoiceId: 3,
-        clientName: "Curri SHPK",
-        clientNUI: "811 444 555",
-        clientAddress: "Sami Frasheri",
-        currency: "euro",
-        clientPhone: "048 8550 143",
+        clientId: 3,
         productsOrServices: [
             {
                 name: "Tranguj",
@@ -73,11 +61,7 @@ let invoices = [
     },
     {
         invoiceId: 4,
-        clientName: "Curri SHPK",
-        clientNUI: "811 444 555",
-        clientAddress: "Sami Frasheri",
-        currency: "euro",
-        clientPhone: "048 8550 143",
+        clientId: 4,
         productsOrServices: [
             {
                 name: "Tranguj",
@@ -89,11 +73,7 @@ let invoices = [
     },
     {
         invoiceId: 5,
-        clientName: "Curri SHPK",
-        clientNUI: "811 444 555",
-        clientAddress: "Sami Frasheri",
-        currency: "$",
-        clientPhone: "048 8550 143",
+        clientId: 1,
         productsOrServices: [
             {
                 name: "Tranguj",
@@ -105,11 +85,7 @@ let invoices = [
     },
     {
         invoiceId: 6,
-        clientName: "Curri SHPK",
-        clientNUI: "811 444 555",
-        clientAddress: "Sami Frasheri",
-        currency: "euro",
-        clientPhone: "048 8550 143",
+        clientId: 3,
         productsOrServices: [
             {
                 name: "Tranguj",
@@ -121,11 +97,7 @@ let invoices = [
     },
     {
         invoiceId: 7,
-        clientName: "Curri SHPK",
-        clientNUI: "811 444 555",
-        clientAddress: "Sami Frasheri",
-        currency: "euro",
-        clientPhone: "048 8550 143",
+        clientId: 2,
         productsOrServices: [
             {
                 name: "Tranguj",
@@ -137,11 +109,7 @@ let invoices = [
     },
     {
         invoiceId: 8,
-        clientName: "Curri SHPK",
-        clientNUI: "811 444 555",
-        clientAddress: "Sami Frasheri",
-        currency: "euro",
-        clientPhone: "048 8550 143",
+        clientId: 4,
         productsOrServices: [
             {
                 name: "Tranguj",
@@ -153,11 +121,7 @@ let invoices = [
     },
     {
         invoiceId: 900,
-        clientName: "Curri SHPK",
-        clientNUI: "811 444 555",
-        clientAddress: "Sami Frasheri",
-        currency: "euro",
-        clientPhone: "048 8550 143",
+        clientId: 2,
         productsOrServices: [
             {
                 name: "Tranguj",
@@ -169,11 +133,7 @@ let invoices = [
     },
     {
         invoiceId: 10,
-        clientName: "Curri SHPK",
-        clientNUI: "811 444 555",
-        clientAddress: "Sami Frasheri",
-        currency: "euro",
-        clientPhone: "048 8550 143",
+        clientId: 1,
         productsOrServices: [
             {
                 name: "Tranguj",
@@ -183,4 +143,66 @@ let invoices = [
             }
         ]
     }
-]
+];
+
+let clients = [
+    {
+        id: 1,
+        clientName: "BOSI SHPK",
+        clientNUI: "811 444 555",
+        clientAddress: "Sami Frasheri",
+        currency: "$",
+        clientPhone: "048 8550 143",
+    },
+    {
+        id: 2,
+        clientName: "Curri SHPK",
+        clientNUI: "811 444 555",
+        clientAddress: "Sami Frasheri",
+        currency: "$",
+        clientPhone: "048 8550 143",
+    },
+    {
+        id: 3,
+        clientName: "Berati SHPK",
+        clientNUI: "811 444 555",
+        clientAddress: "Sami Frasheri",
+        currency: "$",
+        clientPhone: "048 8550 143",
+    },
+    {
+        id: 4,
+        clientName: "HAxhia SHPK",
+        clientNUI: "811 444 555",
+        clientAddress: "Sami Frasheri",
+        currency: "$",
+        clientPhone: "048 8550 143",
+    }
+];
+
+let products = [
+    {
+        id: 1,
+        name: "Speca",
+        price: 2,
+        unit: "kg"
+    },
+    {
+        id: 2,
+        name: "Tranguj",
+        price: 4,
+        unit: "kg"
+    },
+    {
+        id: 3,
+        name: "Karrota",
+        price: 1,
+        unit: "kg"
+    },
+    {
+        id: 4,
+        name: "Domate",
+        price: 9,
+        unit: "kg"
+    }
+];
