@@ -21,8 +21,15 @@
 </head>
 <body>
 
-<button>Merre numrin</button>
+<button onclick="increaseOrderId()">Merre numrin</button>
 <div id="order-id">0</div>
 
 </body>
+<script>
+    function increaseOrderId(){
+        let oldId = +document.getElementById("order-id").innerText;
+        let newId = oldId + 1;
+        document.getElementById("order-id").innerText = newId + '';
+    }
+</script>
 </html>
