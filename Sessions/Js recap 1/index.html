@@ -3,17 +3,19 @@
 <head>
     <title>Recap</title>
     <style>
-        body{
+        body {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
+
         button {
             width: 200px;
             height: 60px;
             font-size: 20px;
         }
-        #order-id{
+
+        #order-id {
             font-size: 300px;
         }
 
@@ -23,12 +25,22 @@
 
 <button onclick="increaseOrderId()">Merre numrin</button>
 <div id="order-id">0</div>
+<button onclick="decreaeOrderId()">Ktheje numrin</button>
 
 </body>
 <script>
-    function increaseOrderId(){
+    function increaseOrderId() {
         let oldId = +document.getElementById("order-id").innerText;
         let newId = oldId + 1;
+        document.getElementById("order-id").innerText = newId + '';
+    }
+
+    function decreaeOrderId() {
+        let oldId = +document.getElementById("order-id").innerText;
+        let newId = oldId - 1;
+        if (newId < 0) {
+            return
+        }
         document.getElementById("order-id").innerText = newId + '';
     }
 </script>
