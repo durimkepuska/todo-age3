@@ -18,7 +18,10 @@
 <div class="inputs">
     <input id="name" type="text" placeholder="Emri">
     <input id="lastname" type="text" placeholder="Mbiemri">
-    <button onclick="savePerson()">Save</button>
+    <button onclick="saveAndShowPersons()">Save</button>
+</div>
+<div class="count">
+    0
 </div>
 <div class="persons">
 
@@ -27,7 +30,7 @@
 <script>
     let persons = [];
 
-    function savePerson() {
+    function saveAndShowPersons() {
         const name = document.getElementById("name").value
         const lastname = document.getElementById("lastname").value
         let person = {
@@ -36,15 +39,24 @@
         }
         persons.push(person)
         showPersons();
+
+        document.querySelector(".count").innerHTML = persons.length
+
     }
 
     function showPersons() {
         document.querySelector(".persons").innerHTML = ""
-        for (let i = 0; i < persons.length; i++) {
+        for (let i = persons.length - 1; i >= 0; i--) {
+            console.log(i)
             document.querySelector(".persons").innerHTML =
                 document.querySelector(".persons").innerHTML
-                + `<div>${persons[i].name} ${persons[i].lastname}</div>`
+                + `<div>${persons[i].name} ${persons[i].lastname}<button onclick="deletePerson(${i})">Delete</button></div>`
         }
+    }
+
+    function deletePerson(id) {
+        persons.splice(id, 1);
+        showPersons();
     }
 
 </script>
