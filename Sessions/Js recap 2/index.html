@@ -25,13 +25,17 @@
 </div>
 </body>
 <script>
+    let persons = [];
+
     function savePerson() {
         const name = document.getElementById("name").value
         const lastname = document.getElementById("lastname").value
+        let person = {
+            name: name,
+            lastname: lastname
+        }
 
-        document.querySelector(".persons").innerHTML =
-            document.querySelector(".persons").innerHTML +
-            `<DIV>${name} ${lastname}</DIV>`
+        persons.push(person)
     }
 </script>
 </html>
