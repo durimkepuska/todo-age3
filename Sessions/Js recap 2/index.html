@@ -34,8 +34,18 @@
             name: name,
             lastname: lastname
         }
-
         persons.push(person)
+        showPersons();
     }
+
+    function showPersons() {
+        document.querySelector(".persons").innerHTML = ""
+        for (let i = 0; i < persons.length; i++) {
+            document.querySelector(".persons").innerHTML =
+                document.querySelector(".persons").innerHTML
+                + `<div>${persons[i].name} ${persons[i].lastname}</div>`
+        }
+    }
+
 </script>
 </html>
