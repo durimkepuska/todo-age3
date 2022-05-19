@@ -16,3 +16,9 @@ function getMoney() {
 function updateBilance() {
     document.getElementById("bilance").innerText = bank.showBilance()
 }
+
+function sendMoney(){
+    const value = document.getElementById("transfer-value").value;
+    bank.credit(+value);
+    updateBilance()
+}
