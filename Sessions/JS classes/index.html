@@ -4,7 +4,23 @@
     <title>Classes</title>
 </head>
 <body>
-
+<div class="login">
+    <input type="text" id="account-number" placeholder="account number">
+    <input type="password" id="pin" placeholder="pin">
+    <button onclick="login()">
+        Login
+    </button>
+</div>
+<br>
+<div id="bilance"></div>
+<br>
+<div class="options">
+    <div class="deposit">
+        <input id="deposit-value" type="number" placeholder="Deposit value">
+        <button onclick="getMoney()">Deposit</button>
+    </div>
+</div>
 </body>
-<script src="class.js"></script>
+<script src="bank.js"></script>
+<script src="functions.js"></script>
 </html>

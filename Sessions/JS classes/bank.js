@@ -1,16 +1,15 @@
 class Bank {
-    #accountNumber;
-    #bilance = 0;
-    #transaction;
+    #bilance = 5000;
 
     #pin = 8888;
     #clientAccountNumber = 123456789;
+
     #loggedIn = false;
 
-    kyqu(id, pin) {
-        if (id === this.#clientAccountNumber && this.#pin === pin) {
+    constructor(pin, id) {
+        if (+id === this.#clientAccountNumber && this.#pin === +pin) {
             this.#loggedIn = true;
-            console.log('success')
+            console.log('LoggedIn')
         } else {
             console.error("Login failed")
         }
@@ -53,12 +52,3 @@ class Bank {
         return this.#bilance
     }
 }
-
-const bank = new Bank();
-bank.kyqu(123456789, 8888)
-
-bank.deposit(5000);
-bank.credit(500)
-bank.transfer("56465465465465", 500)
-
-console.log('bilanci i juaj', bank.showBilance())
