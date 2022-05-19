@@ -17,8 +17,13 @@ function updateBilance() {
     document.getElementById("bilance").innerText = bank.showBilance()
 }
 
-function sendMoney(){
+function sendMoney() {
     const value = document.getElementById("transfer-value").value;
     bank.credit(+value);
     updateBilance()
+}
+
+function logout(){
+    bank.logout();
+    document.getElementById("bilance").innerText = ''
 }

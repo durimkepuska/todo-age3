@@ -15,6 +15,10 @@ class Bank {
         }
     }
 
+    logout() {
+        this.#loggedIn = false;
+    }
+
     deposit(value) {
         if (this.#loggedIn) {
             if (value < 0) {
@@ -49,6 +53,14 @@ class Bank {
     }
 
     showBilance() {
-        return this.#bilance
+        if (this.#loggedIn) {
+            return this.#bilance
+        } else {
+            alert("fjalekalimi eshte gabim")
+            console.error("Login failed")
+            return undefined;
+        }
+
     }
 }
+
