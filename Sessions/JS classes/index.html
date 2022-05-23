@@ -1,32 +1,47 @@
 <html lang="">
-
+<link rel="stylesheet" href="styles.css">
 <head>
     <title>Classes</title>
 </head>
 <body>
-<div class="login">
-    <input type="text" id="account-number" placeholder="account number">
-    <input type="password" id="pin" placeholder="pin">
-    <button onclick="login()">
-        Login
-    </button>
+    <div class="opa"></div>
+    <div class="login-box">
+        <h1>Login</h1>
+   
+     <div class="text-box">
+        <i class="fa-solid fa-user"></i>
+        <input type="text" id="account-number" placeholder="Account Number">
+    </div>
+
+    <div class="text-box">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" id="pin" placeholder="Pin">
+    </div>
+
+    <button class="button-login" onclick="login()">Login</button>
 </div>
-<br>
-<div id="bilance"></div>
-<br>
+
 <div class="options">
+    <div class="dash-title"><i class="fa-solid fa-user"></i>
+        Welcome, User</div>
+    <div id="bilance"></div>
+
+
     <div class="deposit">
         <input id="deposit-value" type="number" placeholder="Deposit value">
         <button onclick="getMoney()">Get money</button>
     </div>
     <br>
     <div class="transfer">
-        <input id="transfer-value" type="number" placeholder="transfer value">
-        <button onclick="sendMoney()">Send money</button>
+        <input id="transfer-value" type="number" placeholder="Transfer value">
+        <button onclick="sendMoney()">Transfer</button>
+        <button class="go-out" onclick="logout()">Logout</button>
     </div>
 </div>
 
-<div><button onclick="logout()">Logout</button></div>
+</div>
+
+
 </body>
 <script src="bank.js"></script>
 <script src="functions.js"></script>
