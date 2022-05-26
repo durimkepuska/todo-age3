@@ -5,7 +5,8 @@ function login() {
     const accountId = document.getElementById('account-number').value;
     const pin = document.getElementById('pin').value;
     bank = new Bank(pin, accountId);
-    updateBilance()    
+    updateBilance()
+    document.querySelector(".options").style.display = 'none'
      if (document.querySelector(".options").style.display === 'none') {
          document.querySelector(".options").style.display = 'flex';
          document.querySelector(".login-box").style.display = 'none';
