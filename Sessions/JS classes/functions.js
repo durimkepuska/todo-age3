@@ -6,21 +6,15 @@ function login() {
     const pin = document.getElementById('pin').value;
     bank = new Bank(pin, accountId);
     updateBilance()    
-    // document.querySelector('.login-box').style.display = 'none';
-    // document.querySelector('.options').style.display = 'flex';
-    let logOn = document.querySelector(".login-box");
-    let logOff = document.querySelector(".options");
-
-    if (document.querySelector(".options").style.display === 'none') {
-        document.querySelector(".login-box").style.display = 'none';
-        document.querySelector(".options").style.display = 'flex';
+     if (document.querySelector(".options").style.display === 'none') {
+         document.querySelector(".options").style.display = 'flex';
+         document.querySelector(".login-box").style.display = 'none';
     } 
     else {
         document.querySelector(".options").style.display = 'none';
     }
     
 }
-
 function getMoney() {
     const value = document.getElementById("deposit-value").value;
     bank.deposit(+value);
@@ -35,7 +29,8 @@ function updateBilance() {
     font-size: 60px;
     border-bottom: 1px solid #0008f5;
     margin-bottom: 35px;
-    width: 40%;`
+    width: 40%;
+    transition: 0.9s`
 }
 
 function sendMoney() {
