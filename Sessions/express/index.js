@@ -23,7 +23,10 @@ app.get('/decrease', (req, res) => {
   res.json({count: count, name: "romb"})
 })
 
-
+app.get('/reset', (req, res) => {
+  count = 0;
+  res.json({count: count, name: "romb"})
+})
 
 app.listen(port, () => {
   console.log("serveri i startua")
