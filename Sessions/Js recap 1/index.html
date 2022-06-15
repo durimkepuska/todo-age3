@@ -30,28 +30,26 @@
 </body>
 <script>
     function increaseOrderId() {
-        fetch("http://192.168.1.199:8080/count").then(response => response.json()).then(json => {
+        fetch("http://localhost:8080/count").then(response => response.json()).then(json => {
             console.log(json)
             document.getElementById("order-id").innerText = json.count;
         })
     }
 
     function getLastId() {
-        fetch("http://192.168.1.199:8080/last").then(response => response.json()).then(json => {
+        fetch("http://localhost:8080/last").then(response => response.json()).then(json => {
             console.log(json)
             document.getElementById("order-id").innerText = json.count;
         })
     }
 
     function decreaseOrderId() {
-        let oldId = +document.getElementById("order-id").innerText;
-        let newId = oldId - 1;
-        if (newId < 0) {
-            return
-        }
-        document.getElementById("order-id").innerText = newId + '';
+        fetch("http://localhost:8080/decrease").then(response => response.json()).then(json => {
+        document.getElementById("order-id").innerText = json.count;
+        })
     }
     getLastId();
+    
 
 </script>
 </html>

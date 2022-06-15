@@ -18,6 +18,13 @@ app.get('/last', (req, res) => {
   res.json({count: count, name: "romb"})
 })
 
+app.get('/decrease', (req, res) => {
+  count = count - 1;
+  res.json({count: count, name: "romb"})
+})
+
+
+
 app.listen(port, () => {
   console.log("serveri i startua")
 })
