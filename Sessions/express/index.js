@@ -1,11 +1,11 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 80
 let count = 0;
 
 app.get('/count', (req, res) => {
   count = count + 1;
-  res.json({count: count})
+  res.json({count: count, name: "romb"})
 })
 
 
