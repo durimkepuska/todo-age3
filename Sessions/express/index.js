@@ -14,6 +14,9 @@ app.get('/count', (req, res) => {
   res.json({count: count, name: "romb"})
 })
 
+app.get('/last', (req, res) => {
+  res.json({count: count, name: "romb"})
+})
 
 app.listen(port, () => {
   console.log("serveri i startua")

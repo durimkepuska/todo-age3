@@ -24,17 +24,20 @@
 <body>
 
 <button onclick="increaseOrderId()">Merre numrin</button>
-<div id="order-id">0</div>
+<div id="order-id"></div>
 <button onclick="decreaseOrderId()">Ktheje numrin</button>
 
 </body>
 <script>
     function increaseOrderId() {
-        // let oldId = +document.getElementById("order-id").innerText;
-        // let newId = oldId + 1;
-        // document.getElementById("order-id").innerText = newId + '';
-
         fetch("http://192.168.1.199:8080/count").then(response => response.json()).then(json => {
+            console.log(json)
+            document.getElementById("order-id").innerText = json.count;
+        })
+    }
+
+    function getLastId() {
+        fetch("http://192.168.1.199:8080/last").then(response => response.json()).then(json => {
             console.log(json)
             document.getElementById("order-id").innerText = json.count;
         })
@@ -48,5 +51,7 @@
         }
         document.getElementById("order-id").innerText = newId + '';
     }
+    getLastId();
+
 </script>
 </html>
