@@ -4,6 +4,7 @@ const port = 8080
 
 const accountNumber = '123456789'
 const pin = '8888'
+const bilance = 8000;
 
 app.use(function (req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', '*');
