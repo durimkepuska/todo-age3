@@ -1,65 +1,38 @@
 class Bank {
     #bilance = 5000;
 
-    #pin = 8888;
-    #clientAccountNumber = 123456789;
-
-    #loggedIn = false;
-
-    constructor(pin, id) {
-        if (+id === this.#clientAccountNumber && this.#pin === +pin) {
-            this.#loggedIn = true;
-            console.log('LoggedIn')
-        } else {
-            console.error("Login failed")
-        }
-    }
-
     logout() {
-        this.#loggedIn = false;
     }
 
     deposit(value) {
-        if (this.#loggedIn) {
-            if (value < 0) {
-                console.error("Vetem depozita pozitive")
-                return
-            }
-            this.#bilance = this.#bilance + value
-        } else {
-            console.error("Login failed")
+
+        if (value < 0) {
+            console.error("Vetem depozita pozitive")
+            return
         }
+        this.#bilance = this.#bilance + value
     }
 
     credit(value) {
-        if (this.#loggedIn) {
-            if (value > this.#bilance) {
-                console.error("Nuk keni fonde te mjaftueshme");
-                return;
-            }
-            this.#bilance = this.#bilance - value;
-        } else {
-            console.error("Login failed")
+
+        if (value > this.#bilance) {
+            console.error("Nuk keni fonde te mjaftueshme");
+            return;
         }
+        this.#bilance = this.#bilance - value;
+
     }
 
     transfer(id, value) {
-        if (this.#loggedIn) {
-            this.credit(value);
-        } else {
-            console.error("Login failed")
-        }
+
+        this.credit(value);
+
 
     }
 
     showBilance() {
-        if (this.#loggedIn) {
-            return this.#bilance
-        } else {
-            alert("fjalekalimi eshte gabim")
-            console.error("Login failed")
-            return undefined;
-        }
+
+        return this.#bilance
 
     }
 }

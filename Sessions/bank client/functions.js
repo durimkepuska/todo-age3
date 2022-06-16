@@ -4,18 +4,32 @@ function login() {
 
     const accountId = document.getElementById('account-number').value;
     const pin = document.getElementById('pin').value;
-    bank = new Bank(pin, accountId);
-    updateBilance()
-    document.querySelector(".options").style.display = 'none'
-     if (document.querySelector(".options").style.display === 'none') {
-         document.querySelector(".options").style.display = 'flex';
-         document.querySelector(".login-box").style.display = 'none';
-    } 
-    else {
-        document.querySelector(".options").style.display = 'none';
-    }
-    
+
+    fetch('http://localhost:8080/login', {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({accountNumber: accountId, pin: pin})
+    }).then(response => response.json()).then(json => {
+        if (json.loggedIn) {
+            bank = new Bank();
+            updateBilance()
+            document.querySelector(".options").style.display = 'none'
+            if (document.querySelector(".options").style.display === 'none') {
+                document.querySelector(".options").style.display = 'flex';
+                document.querySelector(".login-box").style.display = 'none';
+            } else {
+                document.querySelector(".options").style.display = 'none';
+            }
+        } else {
+            alert('wrong user and pass')
+        }
+    })
+
+
 }
+
 function getMoney() {
     const value = document.getElementById("deposit-value").value;
     bank.deposit(+value);
@@ -40,13 +54,13 @@ function sendMoney() {
     updateBilance()
 }
 
-function logout(){
+function logout() {
     bank.logout();
     document.getElementById("bilance").innerText = '';
-    document.getElementById("bilance").style.border ='none';
+    document.getElementById("bilance").style.border = 'none';
     document.querySelector(".options").style.display = 'none';
-    document.querySelector(".login-box").style.display ='block';
-    
+    document.querySelector(".login-box").style.display = 'block';
+
 
 }
 
@@ -54,5 +68,5 @@ function logout(){
 // let dashboard = document.querySelector('.options');
 // if(){
 //     document.querySelector('.login-box');
-    
+
 // }
