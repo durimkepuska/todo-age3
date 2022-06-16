@@ -55,6 +55,20 @@
         })
     }
 
+    function post() {
+        fetch("http://localhost:8080/post", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({name: 'durim'}),
+        }).then(response => response.json()).then(json => {
+            document.getElementById("order-id").innerText = json.count;
+        })
+    }
+
+    post()
+
     getLastId();
 
 
