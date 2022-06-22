@@ -2,6 +2,7 @@ class Bank {
     #bilance = 5000;
 
     logout() {
+        window.localStorage.removeItem("loggedIn")
     }
 
     deposit(value) {

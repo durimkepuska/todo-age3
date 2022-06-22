@@ -13,15 +13,8 @@ function login() {
         body: JSON.stringify({accountNumber: accountId, pin: pin})
     }).then(response => response.json()).then(json => {
         if (json.loggedIn) {
-            bank = new Bank();
-            updateBilance()
-            document.querySelector(".options").style.display = 'none'
-            if (document.querySelector(".options").style.display === 'none') {
-                document.querySelector(".options").style.display = 'flex';
-                document.querySelector(".login-box").style.display = 'none';
-            } else {
-                document.querySelector(".options").style.display = 'none';
-            }
+            window.localStorage.setItem("loggedIn", true)
+            initBank();
         } else {
             alert('wrong user and pass')
         }
@@ -30,6 +23,17 @@ function login() {
 
 }
 
+function initBank(){
+    bank = new Bank();
+    updateBilance()
+    document.querySelector(".options").style.display = 'none'
+    if (document.querySelector(".options").style.display === 'none') {
+        document.querySelector(".options").style.display = 'flex';
+        document.querySelector(".login-box").style.display = 'none';
+    } else {
+        document.querySelector(".options").style.display = 'none';
+    }
+}
 function deposit() {
     const value = document.getElementById("deposit-value").value;
     bank.deposit(+value);
@@ -61,6 +65,10 @@ function logout() {
     document.querySelector(".login-box").style.display = 'block';
 
 
+}
+const loggedIn = window.localStorage.getItem("loggedIn")
+if(loggedIn != null && loggedIn === 'true'){
+    initBank();
 }
 
 // let login = document.querySelector('.login-box');
