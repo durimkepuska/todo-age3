@@ -23,11 +23,15 @@ class Bank {
     }
 
     credit(value) {
-        if (value > this.#bilance) {
-            console.error("Nuk keni fonde te mjaftueshme");
-            return;
-        }
-        this.#bilance = this.#bilance - value;
+        fetch('http://localhost:8080/credit', {
+            method: "PATCH",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({creditValue: value})
+        }).then(response => response.json()).then(json => {
+            this.showBilance()
+        })
     }
 
     transfer(id, value) {

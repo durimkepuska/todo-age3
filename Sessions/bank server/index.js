@@ -36,9 +36,13 @@ app.patch('/deposit', (req, res) => {
   res.json({valid: true})
 })
 
+app.patch('/credit', (req, res) => {
+  bilance = bilance - req.body.creditValue
+  res.json({valid: true})
+})
+
 app.listen(port, () => {
   console.log("serveri i startua")
 })
-
 
 
