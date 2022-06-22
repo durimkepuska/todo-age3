@@ -30,14 +30,13 @@ function login() {
 
 }
 
-function getMoney() {
+function deposit() {
     const value = document.getElementById("deposit-value").value;
     bank.deposit(+value);
-    updateBilance()
 }
 
 function updateBilance() {
-    document.getElementById("bilance").innerText = bank.showBilance()
+    bank.showBilance()
     document.getElementById("bilance").style = `  color: white;
     text-align: center;
     padding: 1px;
@@ -48,7 +47,7 @@ function updateBilance() {
     transition: 0.9s`
 }
 
-function sendMoney() {
+function credit() {
     const value = document.getElementById("transfer-value").value;
     bank.credit(+value);
     updateBilance()
