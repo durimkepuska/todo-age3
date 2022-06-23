@@ -1,0 +1,29 @@
+CREATE DATABASE bank;
+
+SHOW DATABASES;
+
+USE bank;
+
+SHOW TABLES;
+
+CREATE TABLE users (
+    id int,
+    accountId varchar(50),
+    pin int
+);
+
+CREATE TABLE bilances (
+    userId int,
+    bilance FLOAT
+);
+
+
+INSERT INTO users (id, accountId, pin) VALUES (1, 123456789, 8888);
+
+SELECT id, accoundId, pin FROM users;
+
+INSERT INTO bilances (userId, bilance) VALUES (1, 500);
+INSERT INTO bilances (userId, bilance) VALUES (2, 9000);
+
+Starto apache ne XAMPP
+http://localhost/phpmyadmin/
