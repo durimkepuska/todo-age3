@@ -19,11 +19,14 @@ CREATE TABLE bilances (
 
 
 INSERT INTO users (id, accountId, pin) VALUES (1, 123456789, 8888);
-
 SELECT id, accoundId, pin FROM users;
 
+CRUD (Creat, Read, Update, Delete)
+SELECT * FROM bilances;
 INSERT INTO bilances (userId, bilance) VALUES (1, 500);
-INSERT INTO bilances (userId, bilance) VALUES (2, 9000);
+UPDATE bilances set bilance = 10000 where userId = 1;
+DELETE FROM bilances where userId = 1;
+
 
 Starto apache ne XAMPP
 http://localhost/phpmyadmin/
