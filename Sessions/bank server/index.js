@@ -1,24 +1,14 @@
 const express = require('express')
 const mysql = require('mysql')
-
 const app = express()
-
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '',
   database: 'bank'
 })
-
 connection.connect()
-
-
 const port = 8080
-
-const accountNumber = '123456789'
-const pin = '8888'
-
-let bilance = 9000;
 
 app.use(function (req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -42,9 +32,6 @@ app.post('/login', (req, res) => {
       return res.json({loggedIn: false})
     }
   })
-
-  
-  
 })
 
 
@@ -62,13 +49,11 @@ app.get('/bilance/:userId', (req, res) => {
   
 })
 
-app.patch('/deposit', (req, res) => {
-  bilance = bilance + req.body.depositValue
+app.patch('/deposit/:userId', (req, res) => {
   res.json({valid: true})
 })
 
 app.patch('/credit', (req, res) => {
-  bilance = bilance - req.body.creditValue
   res.json({valid: true})
 })
 

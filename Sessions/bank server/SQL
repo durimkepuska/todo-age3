@@ -28,7 +28,7 @@ SELECT * FROM users;
 # CRUD (Creat, Read, Update, Delete)
 SELECT * FROM bilances;
 INSERT INTO bilances (userId, bilance) VALUES (1, 500);
-UPDATE bilances set bilance = 10000 where userId = 1;
+UPDATE bilances set bilance = 10000 where userId = 2;
 DELETE FROM bilances where userId = 1;
 
 
