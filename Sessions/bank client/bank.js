@@ -3,6 +3,7 @@ class Bank {
 
     logout() {
         window.localStorage.removeItem("loggedIn")
+        window.localStorage.removeItem("userId")
     }
 
     deposit(value) {
@@ -40,7 +41,7 @@ class Bank {
     }
 
     showBilance() {
-        fetch("http://localhost:8080/bilance").then(response => response.json()).then(json => {
+        fetch("http://localhost:8080/bilance/" + localStorage.getItem("userId")).then(response => response.json()).then(json => {
             document.getElementById("bilance").innerText = json.bilance;
         });
     }

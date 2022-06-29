@@ -14,6 +14,7 @@ function login() {
     }).then(response => response.json()).then(json => {
         if (json.loggedIn) {
             window.localStorage.setItem("loggedIn", true)
+            window.localStorage.setItem("userId", json.userId)
             initBank();
         } else {
             alert('wrong user and pass')
