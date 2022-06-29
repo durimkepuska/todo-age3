@@ -7,21 +7,25 @@ USE bank;
 SHOW TABLES;
 
 CREATE TABLE users (
-    id int,
+    id int AUTO_INCREMENT,
     accountId varchar(50),
-    pin int
+    pin int,
+    PRIMARY KEY (id)
 );
 
 CREATE TABLE bilances (
+    id int AUTO_INCREMENT,
     userId int,
-    bilance FLOAT
+    bilance FLOAT,
+    PRIMARY KEY (id),
+    FOREIGN KEY (userId) REFERENCES users(id)
 );
 
 
-INSERT INTO users (id, accountId, pin) VALUES (1, 123456789, 8888);
-SELECT id, accoundId, pin FROM users;
+INSERT INTO users (accountId, pin) VALUES (123456789, 8888);
+SELECT * FROM users;
 
-CRUD (Creat, Read, Update, Delete)
+# CRUD (Creat, Read, Update, Delete)
 SELECT * FROM bilances;
 INSERT INTO bilances (userId, bilance) VALUES (1, 500);
 UPDATE bilances set bilance = 10000 where userId = 1;
