@@ -29,7 +29,7 @@ class Bank {
             console.error("Vetem depozita pozitive")
             return
         }
-        fetch('http://localhost:8080/credit', + localStorage.getItem("userId"),{
+        fetch('http://localhost:8080/credit/' + localStorage.getItem("userId"),{
             method: "PATCH",
             headers: {
                 'Content-Type': 'application/json',
