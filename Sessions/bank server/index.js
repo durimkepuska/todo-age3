@@ -20,10 +20,43 @@ app.use(function (req, res, next) {
 
 app.use(express.json())
 
+
+connection.query(`CREATE TABLE IF NOT EXISTS users  (
+                    id int AUTO_INCREMENT,
+                    accountId varchar(50),
+                    pin int,
+                    PRIMARY KEY (id)
+                    );`, (e, r) => {})
+
+connection.query(`CREATE TABLE IF NOT EXISTS bilances (
+  id int AUTO_INCREMENT,
+  userId int,
+  bilance FLOAT,
+  PRIMARY KEY (id),
+  FOREIGN KEY (userId) REFERENCES users(id)
+);`, (e, r) => {})
+
+connection.query("Select * from users", (e, r) => {
+  if(r !== undefined && r.length === 0){
+    for(let i = 1; i <= 50; i++){
+      connection.query(`Insert into users (accountId, pin) values ("user-${i}", 1234);`, (e, r, f) => {
+        const newUserId = r.insertId
+        console.log(`User ${newUserId} created`)
+        connection.query(`Insert into bilances (userId, bilance) values (${newUserId}, 0);`, (e, r, f) => {
+          console.log(`Bilance for user ${newUserId} created`)
+        })
+      })
+    }
+  }
+})
+
+
+
 app.post('/login', (req, res) => {
   const accountNumber = req.body.accountNumber
   const pin = req.body.pin
-  const sql = `Select * FROM users where accountId = ${accountNumber} and pin = ${pin};`
+  const sql = `Select * FROM users where accountId = "${accountNumber}" and pin = ${pin};`
+  console.log(sql)
   connection.query(sql, (error, user) => {
     if(user !== undefined && user.length === 1){
       return res.json({loggedIn: true, userId: user[0].id})
