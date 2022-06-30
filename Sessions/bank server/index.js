@@ -59,12 +59,16 @@ app.patch('/deposit/:userId', (req, res) => {
   
 })
 
-app.patch('/credit', (req, res) => {
+app.patch('/credit/:userId', (req, res) => {
   res.json({valid: true})
+  const userId = req.params.userId;
+  const depositValue = req.body.depositValue
+  const sql = `UPDATE bilances set bilance = bilance - ${depositValue} where userId = ${userId};`;
+  connection.query(sql, (e, response) => {
+    if(e) throw e
+    res.json({valid: true})
 })
-
+})
 app.listen(port, () => {
   console.log("serveri started on port " + port)
 })
-
-
