@@ -26,7 +26,6 @@ app.post('/login', (req, res) => {
   const sql = `Select * FROM users where accountId = ${accountNumber} and pin = ${pin};`
   connection.query(sql, (error, user) => {
     if(user !== undefined && user.length === 1){
-      console.log("LoggedIn", user);
       return res.json({loggedIn: true, userId: user[0].id})
     } else {
       return res.json({loggedIn: false})
@@ -50,7 +49,14 @@ app.get('/bilance/:userId', (req, res) => {
 })
 
 app.patch('/deposit/:userId', (req, res) => {
-  res.json({valid: true})
+  const userId = req.params.userId;
+  const depositValue = req.body.depositValue
+  const sql = `UPDATE bilances set bilance = bilance + ${depositValue} where userId = ${userId};`;
+  connection.query(sql, (e, response) => {
+    if(e) throw e
+    res.json({valid: true})
+})
+  
 })
 
 app.patch('/credit', (req, res) => {
@@ -58,7 +64,7 @@ app.patch('/credit', (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log("serveri i startua")
+  console.log("serveri started on port " + port)
 })
 
 

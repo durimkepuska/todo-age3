@@ -12,7 +12,7 @@ class Bank {
             return
         }
 
-        fetch('http://localhost:8080/deposit', {
+        fetch('http://localhost:8080/deposit/' + localStorage.getItem("userId"), {
             method: "PATCH",
             headers: {
                 'Content-Type': 'application/json',
