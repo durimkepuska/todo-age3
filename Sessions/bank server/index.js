@@ -60,7 +60,6 @@ app.post('/login', (req, res) => {
   const accountNumber = req.body.accountNumber
   const pin = req.body.pin
   const sql = `Select * FROM users where accountId = "${accountNumber}" and pin = ${pin};`
-  console.log(sql)
   connection.query(sql, (error, user) => {
     if(user !== undefined && user.length === 1){
       const token = uuidv4();
@@ -75,7 +74,6 @@ app.post('/login', (req, res) => {
 
 app.get('/bilance/:userId', (req, res) => {
   const userId = req.params.userId;
-  console.log(tokens)
   const token = req.headers.authorization;
   if(!tokens.includes(token)){
     return res.json({unauthorized: true})
@@ -121,6 +119,21 @@ app.patch('/credit/:userId', (req, res) => {
     res.json({valid: true})
   })
 })
+
+app.post('/logout', (req, res) => {
+  const token = req.headers.authorization;
+  if(!tokens.includes(token)){
+    return res.json({unauthorized: true})
+  }
+
+  const index = tokens.indexOf(token);
+  if (index > -1) {
+    tokens.splice(index, 1); 
+  }
+
+  return res.json({unauthorized: true})
+})
+
 
 app.listen(port, () => {
   console.log("serveri started on port " + port)
