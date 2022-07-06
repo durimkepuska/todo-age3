@@ -1,6 +1,8 @@
 const express = require('express')
 const mysql = require('mysql')
 const app = express()
+const { v4: uuidv4 } = require('uuid');
+
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
@@ -10,11 +12,13 @@ const connection = mysql.createConnection({
 connection.connect()
 const port = 8080
 
+const tokens = [];
+
 app.use(function (req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  res.setHeader('Access-Control-Allow-Headers', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE');
-
+ 
   next();
 });
 
@@ -22,19 +26,19 @@ app.use(express.json())
 
 
 connection.query(`CREATE TABLE IF NOT EXISTS users  (
-                    id int AUTO_INCREMENT,
-                    accountId varchar(50),
-                    pin int,
-                    PRIMARY KEY (id)
+                      id int AUTO_INCREMENT,
+                      accountId varchar(50),
+                      pin int,
+                      PRIMARY KEY (id)
                     );`, (e, r) => {})
 
 connection.query(`CREATE TABLE IF NOT EXISTS bilances (
-  id int AUTO_INCREMENT,
-  userId int,
-  bilance FLOAT,
-  PRIMARY KEY (id),
-  FOREIGN KEY (userId) REFERENCES users(id)
-);`, (e, r) => {})
+                      id int AUTO_INCREMENT,
+                      userId int,
+                      bilance FLOAT,
+                      PRIMARY KEY (id),
+                      FOREIGN KEY (userId) REFERENCES users(id)
+                    );`, (e, r) => {})
 
 connection.query("Select * from users", (e, r) => {
   if(r !== undefined && r.length === 0){
@@ -59,7 +63,9 @@ app.post('/login', (req, res) => {
   console.log(sql)
   connection.query(sql, (error, user) => {
     if(user !== undefined && user.length === 1){
-      return res.json({loggedIn: true, userId: user[0].id})
+      const token = uuidv4();
+      tokens.push(token);
+      return res.json({loggedIn: true, userId: user[0].id, token: token})
     } else {
       return res.json({loggedIn: false})
     }
@@ -69,19 +75,28 @@ app.post('/login', (req, res) => {
 
 app.get('/bilance/:userId', (req, res) => {
   const userId = req.params.userId;
+  console.log(tokens)
+  const token = req.headers.authorization;
+  if(!tokens.includes(token)){
+    return res.json({unauthorized: true})
+  }
+
   const sql = `Select bilance from bilances where userId = ${userId};`
   connection.query(sql, (e, shuma) => {
-    
       if(shuma !== undefined && shuma.length === 1){
         return res.json({bilance: shuma[0].bilance})
       } else {
         return res.json({bilance: -1})
       }
   })
-  
 })
 
 app.patch('/deposit/:userId', (req, res) => {
+  const token = req.headers.authorization;
+  if(!tokens.includes(token)){
+    return res.json({unauthorized: true})
+  }
+
   const userId = req.params.userId;
   const depositValue = req.body.depositValue
   const sql = `UPDATE bilances set bilance = bilance + ${depositValue} where userId = ${userId};`;
@@ -93,6 +108,11 @@ app.patch('/deposit/:userId', (req, res) => {
 })
 
 app.patch('/credit/:userId', (req, res) => {
+  const token = req.headers.authorization;
+  if(!tokens.includes(token)){
+    return res.json({unauthorized: true})
+  }
+
   const userId = req.params.userId;
   const creditValue = req.body.creditValue
   const sql = `UPDATE bilances set bilance = bilance - ${creditValue} where userId = ${userId} AND bilance >= ${creditValue};`;
