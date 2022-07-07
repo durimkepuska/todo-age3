@@ -6,11 +6,19 @@ USE bank;
 
 SHOW TABLES;
 
+CREATE TABLE roles (
+    id int AUTO_INCREMENT,
+    title varchar(50),
+    PRIMARY KEY (id)
+);
+
 CREATE TABLE users (
     id int AUTO_INCREMENT,
     accountId varchar(50),
     pin int,
-    PRIMARY KEY (id)
+    roleId int,
+    PRIMARY KEY (id),
+    FOREIGN KEY (roleId) REFERENCES roles(id)
 );
 
 CREATE TABLE bilances (

@@ -2,8 +2,17 @@ class Bank {
     #bilance = 5000;
 
     logout() {
-        window.localStorage.removeItem("loggedIn")
-        window.localStorage.removeItem("userId")
+        fetch('http://localhost:8080/logout', {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': localStorage.getItem('token')
+            }
+        }).then(response => response.json()).then(json => {
+            window.localStorage.removeItem("loggedIn")
+            window.localStorage.removeItem("userId")
+            window.localStorage.removeItem("token")
+        })
     }
 
     deposit(value) {
@@ -16,6 +25,7 @@ class Bank {
             method: "PATCH",
             headers: {
                 'Content-Type': 'application/json',
+                'Authorization': localStorage.getItem('token')
             },
             body: JSON.stringify({depositValue: value})
         }).then(response => response.json()).then(json => {
@@ -33,6 +43,7 @@ class Bank {
             method: "PATCH",
             headers: {
                 'Content-Type': 'application/json',
+                'Authorization': localStorage.getItem('token')
             },
             body: JSON.stringify({creditValue: value})
         }).then(response => response.json()).then(json => {
@@ -45,7 +56,11 @@ class Bank {
     }
 
     showBilance() {
-        fetch("http://localhost:8080/bilance/" + localStorage.getItem("userId")).then(response => response.json()).then(json => {
+        fetch("http://localhost:8080/bilance/" + localStorage.getItem("userId"),{
+            headers:{
+                'Authorization': localStorage.getItem('token')
+            }
+        }).then(response => response.json()).then(json => {
             document.getElementById("bilance").innerText = json.bilance;
         });
     }
